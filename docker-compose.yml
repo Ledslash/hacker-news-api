@@ -1,0 +1,26 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  api:
+    image: node
+    build:
+      context: .
+      dockerfile: node.dockerfile
+    ports:
+      - "8000:8000"
+    networks:
+      - mynet
+    depends_on: 
+      - mongohost
+
+  mongohost:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
