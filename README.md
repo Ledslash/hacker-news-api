@@ -21,7 +21,7 @@ npm run start
 ```
 
 
-# Proyect Description
+# Project Description
 The backend for this project was made using NodeJS as requested, i've also used (altough with some freedom) CLEAN architecture
 as is the architecture i've found some comfort with personal development.
 
